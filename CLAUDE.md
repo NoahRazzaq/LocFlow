@@ -190,3 +190,38 @@ Vue components must have a single root element.
 - IMPORTANT: Activate `inertia-vue-development` when working with Inertia Vue client-side patterns.
 
 </laravel-boost-guidelines>
+
+## Convention de commits
+
+Format : `<emoji> type(scope): description`
+
+- Emoji issu de gitmoji.dev, correspondant au type (tableau ci-dessous).
+- type en minuscules ; scope = module touché, en minuscules (auth, property, visit, application, dossierfacile, ui, ci, docker…) ; scope facultatif pour un changement global.
+- Description en français, à l'infinitif, sans majuscule initiale ni point final, 72 caractères maximum pour la première ligne.
+- Un commit = un changement cohérent. Si la description a besoin d'un « et », fais deux commits.
+- Corps facultatif après une ligne vide pour expliquer le pourquoi.
+- Ne commite jamais .env, ni de secrets, ni vendor ou node_modules.
+- Ne pousse pas et ne commite pas sans que je le demande.
+
+| Emoji | Type | Usage |
+| --- | --- | --- |
+| ✨ | feat | Nouvelle fonctionnalité |
+| 🐛 | fix | Correction de bug |
+| 🚑️ | hotfix | Correctif urgent en production |
+| ♻️ | refactor | Refactorisation sans changement de comportement |
+| 💄 | style | UI et styles |
+| ✅ | test | Tests |
+| 📝 | docs | Documentation |
+| 🗃️ | db | Migrations, schéma de base |
+| 🔧 | config | Configuration |
+| ➕ | deps | Ajout d'une dépendance |
+| ⬆️ | deps | Mise à jour de dépendances |
+| 🔒️ | security | Sécurité |
+| 👷 | ci | Intégration continue |
+| 🐳 | docker | Docker, Sail |
+| 🎉 | init | Premier commit |
+
+Exemples :
+- ✨ feat(auth): ajouter la connexion par lien magique
+- 🗃️ db(property): créer la table des biens
+- 🐛 fix(visit): empêcher la réservation d'un créneau complet
